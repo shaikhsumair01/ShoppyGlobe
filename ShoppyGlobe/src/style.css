@@ -1,0 +1,7 @@
+@import "tailwindcss";
+.ContentSection{
+    @apply mt-5;
+}
+.Navigation{
+@apply flex gap-10;
+}
