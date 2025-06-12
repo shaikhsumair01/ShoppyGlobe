@@ -1,7 +1,65 @@
-@import "tailwindcss";
-.ContentSection{
-    @apply mt-5;
+/* ***** */
+/* General styling */
+/* ***** */
+@font-face{
+    font-family: Ubuntu;
+    src:url("assets/Ubuntu.ttf")
 }
+@import "tailwindcss";
+
+@theme{
+    --font-Ubuntu: Ubuntu,"serif";
+}
+.html-el{
+@apply box-border m-0 p-0;
+}
+
+.body-el{
+    @apply font-Ubuntu;
+}
+
+/* ***** */
+/* Header component styling */
+/* ***** */
+.Header{
+    @apply flex flex-col bg-linear-90 from-white via-gray-50 to-gray-300;
+}
+/* Head section */
+
+.Head-section{
+    @apply flex justify-between items-center mx-10 mb-5;
+}
+.Head-logo{
+    @apply h-25 w-auto;
+}
+.Search{
+    @apply bg-white flex justify-between w-[50%] p-2 rounded-md shadow-xl shadow-gray-900/10;
+}
+.SearchBar{
+    @apply focus:outline-none w-full text-lg text-teal-600 pl-2;
+}
+.submit-icon{
+    @apply text-lg;
+}
+.submit-icon,.cart-icon, .login-icon, .Nav-link{
+    @apply text-teal-600 hover:text-teal-800;
+}
+.cart-icon, .login-icon{
+    @apply text-xl;
+}
+.Cart{
+    @apply flex justify-center items-center gap-5;
+}
+
+/* Nav bar */
 .Navigation{
-@apply flex gap-10;
+@apply ml-10 flex gap-10 h-8;
+}
+.Nav-link{
+@apply text-xl hover:border-b-2 hover:cursor-pointer font-medium;
+}
+
+/* Home.jsx */
+.Home-Header{
+    @apply text-center text-2xl text-teal-700 mt-50;
 }

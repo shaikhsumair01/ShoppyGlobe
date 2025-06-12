@@ -1,3 +1,7 @@
 export default function ProductList(){
-    return(<></>)
+    return(<>
+    <div className="ProductList">
+        
+    </div>
+    </>)
 }
