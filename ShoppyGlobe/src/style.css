@@ -3,12 +3,12 @@
 /* ***** */
 @font-face{
     font-family: Ubuntu;
-    src:url("assets/Ubuntu.ttf")
+    src:url("assets\Ubuntu-Light.ttf")
 }
 @import "tailwindcss";
 
 @theme{
-    --font-Ubuntu: Ubuntu,"serif";
+    --font-Ubuntu: Ubuntu,"sans-serif";
 }
 .html-el{
 @apply box-border m-0 p-0;
@@ -56,10 +56,30 @@
 @apply ml-10 flex gap-10 h-8;
 }
 .Nav-link{
-@apply text-xl hover:border-b-2 hover:cursor-pointer font-medium;
+@apply text-xl hover:border-b-2 hover:cursor-pointer font-semibold;
 }
 
 /* Home.jsx */
 .Home-Header{
-    @apply text-center text-2xl text-teal-700 mt-50;
+    @apply text-center text-xl text-teal-700 mt-5;
+}
+
+/* ProductList.jsx */
+.Product-List{
+    @apply grid grid-cols-4 gap-3 place-items-center mt-10 ;
+}
+.Product-card{
+    @apply flex flex-col items-center gap-1 rounded-md bg-linear-145 from-gray-200 via-gray-50 to-gray-300 p-3;
+}
+.Product-image{
+    @apply scale-70;
+}
+.Product-name{
+    @apply text-2xl text-teal-700;
+}
+.Product-price{
+    @apply text-xl font-semibold;
+}
+.Product-description{
+    @apply text-white bg-black hover:bg-teal-700 p-2 rounded-md;
 }
