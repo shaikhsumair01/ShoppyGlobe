@@ -69,10 +69,10 @@
     @apply grid grid-cols-4 gap-3 place-items-center mt-10 ;
 }
 .Product-card{
-    @apply flex flex-col items-center gap-1 rounded-md bg-linear-145 from-gray-200 via-gray-50 to-gray-300 p-3;
+    @apply h-[85%] w-full flex flex-col items-center gap-1 rounded-md bg-linear-145 from-gray-200 via-gray-50 to-gray-300 p-3;
 }
 .Product-image{
-    @apply scale-70;
+    @apply scale-70 h-[50%] w-auto;
 }
 .Product-name{
     @apply text-2xl text-teal-700;
