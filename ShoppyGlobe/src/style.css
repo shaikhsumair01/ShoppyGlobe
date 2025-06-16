@@ -11,7 +11,7 @@
     --font-Ubuntu: Ubuntu,"sans-serif";
 }
 .html-el{
-@apply box-border m-0 p-0;
+@apply box-border m-0 p-0 overflow-x-hidden;
 }
 
 .body-el{
@@ -38,6 +38,12 @@
 .SearchBar{
     @apply focus:outline-none w-full text-lg text-teal-600 pl-2;
 }
+.icon-div{
+    @apply flex justify-center gap-3 items-center;
+}
+.cross-icon{
+    @apply text-gray-700 text-lg;
+}
 .submit-icon{
     @apply text-lg;
 }
@@ -56,30 +62,92 @@
 @apply ml-10 flex gap-10 h-8;
 }
 .Nav-link{
-@apply text-xl hover:border-b-2 hover:cursor-pointer font-semibold;
+@apply text-xl hover:cursor-pointer font-semibold;
 }
-
+.Nav-link.active {
+    @apply border-b-2;
+}
+/* ***** */
 /* Home.jsx */
+/* ***** */
 .Home-Header{
-    @apply text-center text-xl text-teal-700 mt-5;
+    @apply text-center text-xl text-teal-700 my-10;
+}
+.Dropdown-div{
+    @apply flex gap-1 mx-10;
+}
+.Filter-Header{
+    @apply font-semibold w-40;
+}
+.Dropdown{
+    @apply bg-gray-100 w-30 text-center rounded-md; 
 }
 
+/* ***** */
 /* ProductList.jsx */
+/* ***** */
 .Product-List{
-    @apply grid grid-cols-4 gap-3 place-items-center mt-10 ;
+    @apply grid grid-cols-4 gap-2 place-items-center mt-10 ;
 }
 .Product-card{
-    @apply h-[85%] w-full flex flex-col items-center gap-1 rounded-md bg-linear-145 from-gray-200 via-gray-50 to-gray-300 p-3;
+    @apply h-[90%] w-full flex flex-col items-center gap-2 rounded-md bg-linear-145 from-gray-200 via-gray-50 to-gray-300 p-2 hover:scale-105;
 }
 .Product-image{
-    @apply scale-70 h-[50%] w-auto;
+    @apply scale-65 h-[50%] w-auto;
 }
 .Product-name{
-    @apply text-2xl text-teal-700;
+    @apply text-base font-semibold text-center text-teal-700;
 }
 .Product-price{
-    @apply text-xl font-semibold;
+    @apply text-xl font-semibold mb-2;
 }
-.Product-description{
-    @apply text-white bg-black hover:bg-teal-700 p-2 rounded-md;
+.Show-description, .Add-to-cart, .back-btn{
+    @apply text-white p-2 rounded-md;
+}
+.btn-container{
+    @apply flex gap-3;
+}
+.Show-description, .back-btn{
+    @apply bg-black border-2 border-teal-600 hover:bg-teal-600;
+}
+.Add-to-cart{
+    @apply  bg-teal-700 border-2 border-teal-900 hover:bg-teal-900;
+}
+
+/* ***** */
+/* ProductDetails.jsx */
+/* ***** */
+.Product-details{
+    @apply w-full flex gap-20 mt-10;
+}
+.Desc-image{
+    @apply h-auto w-[25%];
+}
+.Product-desc{
+    @apply flex flex-col items-center gap-10;
+}
+.description{
+    @apply w-[70%];
+}
+.span-text{
+    @apply font-semibold;
+}
+
+/* ***** */
+/* NotFound.jsx */
+/* ***** */
+.Error-Message{
+    @apply h-screen flex flex-col gap-10 justify-center items-center;
+}
+.Error-title{
+    @apply text-2xl font-semibold text-teal-700;
+}
+.Error-para{
+    @apply text-xl;
+}
+.icon-error{
+    @apply text-3xl text-teal-600;
+}
+.Search-header{
+    @apply text-xl my-10 mx-5 text-teal-700;
 }
