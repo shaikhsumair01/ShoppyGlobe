@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+// Displaying error link
 export default function NotFound() {
     return (
         <div className="Error-Message">

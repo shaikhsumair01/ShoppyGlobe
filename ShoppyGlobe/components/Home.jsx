@@ -1,6 +1,6 @@
 
 import ProductList from "./ProductList";
-
+// Used for rendering the homepage. Contains the title and then the productList component
 export default function Home() {
 
   return (

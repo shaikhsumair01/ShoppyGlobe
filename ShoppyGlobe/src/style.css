@@ -64,8 +64,8 @@
 .Nav-link{
 @apply text-xl hover:cursor-pointer font-semibold;
 }
-.Nav-link.active {
-    @apply border-b-2;
+.active {
+    @apply border-b-2 border-teal-700;
 }
 /* ***** */
 /* Home.jsx */
@@ -150,4 +150,32 @@
 }
 .Search-header{
     @apply text-xl my-10 mx-5 text-teal-700;
+}
+
+/* ***** */
+/* Cart.jsx */
+/* ***** */
+.Cart-header{
+    @apply text-3xl text-center mt-5 text-teal-700 font-semibold;
+}
+.Cart-container{
+    @apply flex flex-col justify-center items-center mt-10 ;
+}
+.Cart-item{
+    @apply flex w-[50%] justify-center gap-5 p-10 bg-gray-100 rounded-lg;
+}
+.Cart-item-image{
+    @apply h-30 w-30;
+}
+.Cart-desc{
+    @apply flex flex-col gap-2 items-center ;
+}
+.Cart-title{
+    @apply text-teal-600 text-lg font-semibold;
+}
+.Cart-qt{
+    @apply text-lg font-bold;
+}
+.Cart-price{
+    @apply text-teal-600;
 }
