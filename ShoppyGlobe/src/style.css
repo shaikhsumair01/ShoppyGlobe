@@ -53,10 +53,12 @@
 .cart-icon, .login-icon{
     @apply text-xl;
 }
-.Cart{
+.nav-icon-div{
     @apply flex justify-center items-center gap-5;
 }
-
+.cart-count-badge{
+    @apply text-sm m-2 ;
+}
 /* Nav bar */
 .Navigation{
 @apply ml-10 flex gap-10 h-8;
@@ -113,7 +115,16 @@
 .Add-to-cart{
     @apply  bg-teal-700 border-2 border-teal-900 hover:bg-teal-900;
 }
-
+.loadingError,.Loading-para{
+@apply font-semibold text-center mt-20;
+}
+.Loading-para{
+    @apply text-orange-400;
+}
+.loadingError{ 
+     /* for Error on fetching data */
+    @apply text-red-500 ;
+}
 /* ***** */
 /* ProductDetails.jsx */
 /* ***** */
@@ -142,9 +153,10 @@
 .Error-title{
     @apply text-2xl font-semibold text-teal-700;
 }
-.Error-para{
+.Error-para, .Loading-para{
     @apply text-xl;
 }
+
 .icon-error{
     @apply text-3xl text-teal-600;
 }
@@ -158,11 +170,29 @@
 .Cart-header{
     @apply text-3xl text-center mt-5 text-teal-700 font-semibold;
 }
-.Cart-container{
-    @apply flex flex-col justify-center items-center mt-10 ;
+.Cart-btn-container{
+    @apply  flex gap-5 justify-center items-center;
 }
+.clear, .checkout-btn{
+    @apply mt-5 p-2  text-white text-lg;
+}
+.clear{
+    @apply bg-teal-600;
+}
+.checkout-btn{
+    @apply bg-red-700;
+}
+.Cart-container{
+    @apply flex flex-col gap-2 justify-center items-center mt-10 ;
+}
+.Cart-message{
+    @apply text-xl text-teal-600;
+}
+/* ***** */
+/* Cart-Item.jsx */
+/* ***** */
 .Cart-item{
-    @apply flex w-[50%] justify-center gap-5 p-10 bg-gray-100 rounded-lg;
+    @apply flex w-[50%] justify-between p-10 bg-gray-100 rounded-lg;
 }
 .Cart-item-image{
     @apply h-30 w-30;
@@ -171,11 +201,32 @@
     @apply flex flex-col gap-2 items-center ;
 }
 .Cart-title{
-    @apply text-teal-600 text-lg font-semibold;
+    @apply w-[70%] text-teal-600 text-lg font-semibold;
 }
 .Cart-qt{
-    @apply text-lg font-bold;
+    @apply flex gap-3 items-center text-lg font-bold;
+}
+.Qt-val{
+    @apply flex items-center gap-5 p-2 bg-white rounded-md;
 }
 .Cart-price{
-    @apply text-teal-600;
+    @apply text-teal-600 font-semibold;
+}
+.divider{
+    @apply bg-linear-120 from-gray-50 to-gray-100 p-2 rounded-md;
+}
+/* Checkout page */
+.Checkout{
+    @apply flex flex-col gap-5 items-center justify-center w-screen h-screen ;
+}
+.Checkout-text{
+    @apply text-red-500 text-2xl;
+}
+
+/* Spinner.jsx for lazyload */
+.Spinner-div{
+    @apply w-screen h-screen flex items-center justify-center;
+}
+.Spinner-item{
+    @apply w-25 h-25 rounded-full border-[15px] border-t-[10px] border-t-amber-200 border-amber-600 animate-spin;
 }

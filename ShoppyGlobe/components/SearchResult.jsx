@@ -12,8 +12,8 @@ export default function SearchResults() {
         product.title.toLowerCase().includes(query.toLowerCase())
     );
 
-    if (loading) return <h2>Loading...</h2>;
-    if (error) return <h2>Error fetching search results.</h2>;
+    if (loading) return <h2 className="Loading-para">Loading...</h2>;
+    if (error) return <h2 className="Error-para loadingError">Error fetching search results.</h2>;
 
     // Showing the result
     return (

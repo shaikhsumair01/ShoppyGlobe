@@ -14,8 +14,8 @@ export default function ProductList(){
    //  filtering products based on category
    const filteredProducts = data.filter(product => product.category === category);
 
-    if (loading) return <h2>Loading...</h2>;
-    if (error) return <h2>Error fetching product details</h2>;
+    if (loading) return <h2 className="Loading-para">Loading...</h2>;
+    if (error) return <h2 className="Error-para loadingError">Error fetching product details</h2>;
     
 
 //   looping through the products and passing each product to ProductItems to render them individually. 

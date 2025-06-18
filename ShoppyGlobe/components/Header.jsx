@@ -1,5 +1,8 @@
 import {NavLink, useNavigate } from "react-router-dom"
 import { useState } from "react";
+import { useSelector } from "react-redux";
+
+
 export default function Header(){
 /* creating a categoryMapping object for linking files (navigating files) through
  different category page */
@@ -14,6 +17,9 @@ const [searchText, setSearchText] = useState("")
 
 const navigate = useNavigate(); // Navigation hook used for navigating to the searched item (Search page)
 
+const cartCount = useSelector((state) =>
+  state.cart.cart_items.reduce((total, item) => total + item.qty, 0)
+); // used for displaying the cartCount
 
     const handleSearch = (e) => {
         // if the searched item exists, sends the data to search page for rendering the item
@@ -41,10 +47,10 @@ const navigate = useNavigate(); // Navigation hook used for navigating to the se
                 <i onClick ={handleSearch} className="fa-solid fa-magnifying-glass submit-icon"></i>
                 </div>
             </div>
-            <div className="Cart">
+            <div className="nav-icon-div">
             <i className="fa-solid fa-arrow-right-to-bracket login-icon"></i>
           <NavLink to="/cart" className={({ isActive }) => isActive ? "active" : ""}>
-  <i className="fa-solid fa-cart-shopping cart-icon"></i>
+  <i className="fa-solid fa-cart-shopping cart-icon"><sup className="cart-count-badge">{cartCount}</sup></i>
 </NavLink>
             </div>
         </div>
