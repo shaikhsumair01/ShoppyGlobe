@@ -17,10 +17,11 @@ const [searchText, setSearchText] = useState("")
 const [isOpen, setIsOpen] = useState(true);
 // Toggling isOpen and when the navigation is open (in mobile view), the user should not be able to scroll
 useEffect(() => {
-  if (isOpen) {
+  if (window.innerWidth <768 && isOpen) {
     document.body.style.overflow = "hidden";
 
      document.body.style.height = "100vh"; 
+
   } else {
     document.body.style.overflow = "";
     document.body.style.height = "";
@@ -31,6 +32,7 @@ useEffect(() => {
 useEffect(() => {
   const handleResize = () => {
     if (window.innerWidth > 768) {
+
       setIsOpen(true); // Ensure nav is visible on desktop
     }
   };
@@ -63,7 +65,7 @@ const cartCount = useSelector((state) =>
     <div className="Header">
         <div className="Head-section">
             <div className="Head-img">
-            <img src="/logo.jpeg" className="Head-logo" />
+            <img src="logo.jpeg" className="Head-logo" />
             <i className={`fa-solid ${isOpen?"fa-xmark mobile-nav-open":"fa-bars mobile-nav"}`} onClick={()=> setIsOpen(!isOpen)}></i>
             </div>
             <div className="Search">
