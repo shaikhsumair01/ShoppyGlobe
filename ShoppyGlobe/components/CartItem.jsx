@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { increaseQty,decreaseQty,decreaseAllQty } from "../src/Redux/Redux-slices/CartSlice";
+import { decreaseQty,decreaseAllQty, addCart } from "../src/Redux/Redux-slices/CartSlice";
 
 // Rendering each elements in the cart and giving them the functionality of removing or increasing their quantity
 export default function CartItem({ data }) {
@@ -12,7 +12,7 @@ export default function CartItem({ data }) {
       <h2 className="Cart-title">{data.title}</h2>
       <h3 className="Cart-qt">Quantity: 
         <span className="Qt-val">
-          <i className="fa-solid fa-plus cart-icon divider" onClick={()=>dispatch(increaseQty(data.id))}>
+          <i className="fa-solid fa-plus cart-icon divider" onClick={()=>dispatch(addCart({...data, id: data.id}))}>
             </i> {data.qty} 
             <i className="fa-solid fa-minus cart-icon divider"  onClick={()=>dispatch(decreaseQty(data.id))}></i>
             </span> 

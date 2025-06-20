@@ -22,18 +22,27 @@
 /* Header component styling */
 /* ***** */
 .Header{
-    @apply flex flex-col bg-linear-90 from-white via-gray-50 to-gray-300;
+    @apply relative w-full flex flex-col bg-linear-90 from-white via-gray-50 to-gray-300;
 }
 /* Head section */
 
 .Head-section{
-    @apply flex justify-between items-center mx-10 mb-5;
+    @apply flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-4 md:gap-0 mx-10 mb-5;
+}
+.Head-img{
+    @apply w-full flex justify-between md:w-auto items-center;
+}
+.mobile-nav, .mobile-nav-open{
+    @apply md:hidden text-xl text-teal-600;
+}
+.mobile-nav-open{
+    @apply absolute z-20; 
 }
 .Head-logo{
     @apply h-25 w-auto;
 }
 .Search{
-    @apply bg-white flex justify-between w-[50%] p-2 rounded-md shadow-xl shadow-gray-900/10;
+    @apply bg-white flex justify-between w-[75%] md:w-[50%] p-2 rounded-md shadow-xl shadow-gray-900/10;
 }
 .SearchBar{
     @apply focus:outline-none w-full text-lg text-teal-600 pl-2;
@@ -61,7 +70,9 @@
 }
 /* Nav bar */
 .Navigation{
-@apply ml-10 flex gap-10 h-8;
+@apply flex-col justify-center items-center absolute z-10 bg-white w-screen h-screen gap-10 
+md:bg-transparent md:flex-row md:justify-start md:items-start md:relative md:ml-10 md:h-8 
+transition-all delay-150 duration-300;
 }
 .Nav-link{
 @apply text-xl hover:cursor-pointer font-semibold;
@@ -89,7 +100,7 @@
 /* ProductList.jsx */
 /* ***** */
 .Product-List{
-    @apply grid grid-cols-4 gap-2 place-items-center mt-10 ;
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 place-items-center mt-10 ;
 }
 .Product-card{
     @apply h-[90%] w-full flex flex-col items-center gap-2 rounded-md bg-linear-145 from-gray-200 via-gray-50 to-gray-300 p-2 hover:scale-105;
@@ -129,10 +140,10 @@
 /* ProductDetails.jsx */
 /* ***** */
 .Product-details{
-    @apply w-full flex gap-20 mt-10;
+    @apply w-full flex flex-col md:flex-row gap-20 mt-10;
 }
 .Desc-image{
-    @apply h-auto w-[25%];
+    @apply h-auto w-[50%] mx-auto md:mx-0 md:w-[40%] lg:w-[30%];
 }
 .Product-desc{
     @apply flex flex-col items-center gap-10;
@@ -192,7 +203,7 @@
 /* Cart-Item.jsx */
 /* ***** */
 .Cart-item{
-    @apply flex w-[50%] justify-between p-10 bg-gray-100 rounded-lg;
+    @apply flex w-full md:w-[50%] justify-between p-10 bg-gray-100 rounded-lg;
 }
 .Cart-item-image{
     @apply h-30 w-30;

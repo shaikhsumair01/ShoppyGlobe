@@ -8,7 +8,7 @@ export default function Cart(){
     const dispatch = useDispatch()
     return(<div>
     <h1 className="Cart-header">Cart</h1>
-     {cart_items.length > 0? <div className="Cart-btn-container"><button className="clear" onClick={()=> dispatch(removeAllProducts())}>Clear Cart</button><Link to={`/CheckOut`}><button className="checkout-btn">Proceed-to-buy</button> </Link></div>: ""}
+     {cart_items.length > 0? <div className="Cart-btn-container"><button className="clear" onClick={()=> dispatch(removeAllProducts())}>Clear Cart</button><Link to={`/CheckOut`}><button className="checkout-btn" onClick={()=> dispatch(removeAllProducts())}>Proceed-to-buy</button> </Link></div>: ""}
      <div className="Cart-container">
         {cart_items.length > 0 ? (
           cart_items.map((item) => <CartItem key={item.id} data={item} />)

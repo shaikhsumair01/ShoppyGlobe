@@ -1,5 +1,5 @@
 import {NavLink, useNavigate } from "react-router-dom"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 
 
@@ -14,6 +14,19 @@ export default function Header(){
 };
 // Using useState to get user inputs when the user types anything inside the search bar
 const [searchText, setSearchText] = useState("")
+const [isOpen, setIsOpen] = useState(false);
+// Toggling isOpen and when the navigation is open (in mobile view), the user should not be able to scroll
+useEffect(() => {
+  if (isOpen) {
+    document.body.style.overflow = "hidden";
+
+     document.body.style.height = "100vh"; 
+  } else {
+    document.body.style.overflow = "";
+    document.body.style.height = "";
+
+  }
+}, [isOpen]);
 
 const navigate = useNavigate(); // Navigation hook used for navigating to the searched item (Search page)
 
@@ -29,8 +42,7 @@ const cartCount = useSelector((state) =>
         }
     };
     // Clearing inputs when the user clicks on cross option
-    const clearInput= (e) =>{
-        const textbox = e.target.parentElement.previousSibling;
+    const clearInput= () =>{
         setSearchText("")
     }
 
@@ -39,7 +51,10 @@ const cartCount = useSelector((state) =>
     <>
     <div className="Header">
         <div className="Head-section">
+            <div className="Head-img">
             <img src="/logo.jpeg" className="Head-logo" />
+            <i className={`fa-solid ${isOpen?"fa-xmark mobile-nav-open":"fa-bars mobile-nav"}`} onClick={()=> setIsOpen(!isOpen)}></i>
+            </div>
             <div className="Search">
                 <input type="text" placeholder="What are you looking For..." className="SearchBar"  value={searchText} onChange={(e)=>setSearchText(e.target.value)} />
                 <div className = "icon-div">
@@ -55,8 +70,8 @@ const cartCount = useSelector((state) =>
             </div>
         </div>
 
-       <ul className="Navigation">
-    <NavLink to="/" className={({ isActive }) => isActive ? "Nav-link active" : "Nav-link"}>
+       <ul className={`Navigation ${isOpen? "flex" : "hidden"}`}>
+    <NavLink to="/" className={({ isActive }) => isActive ? "Nav-link active" : "Nav-link"} onClick={()=>setIsOpen(!isOpen)}>
         Home
     </NavLink>
     {/* Mapping through the categoryMapping objects and based on their key navigating to different pages */}
@@ -66,6 +81,7 @@ const cartCount = useSelector((state) =>
             to={`/${key}`} 
             state={{ category: categoryMapping[key] }} 
             className={({ isActive }) => isActive ? "Nav-link active" : "Nav-link"}
+            onClick={()=>setIsOpen(!isOpen)}
         >
             {key}
         </NavLink>

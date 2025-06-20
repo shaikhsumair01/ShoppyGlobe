@@ -28,22 +28,18 @@ const cartSlice = createSlice({
   reducers: {
     // addCart function
     addCart: (state, action) => {
-      const product = action.payload;
-       console.log("Adding to cart:", product);
-      const selected_product = state.cart_items.find((item) => item.id === product.id);
-      if (!selected_product) {
-        state.cart_items.push({ ...product, qty: 1 });
-        SetData(state.cart_items);
+      const product = action.payload; // taking the action
+      
+      const selected_product = state.cart_items.find((item) => item.id === product.id); // finding the item
+      if (selected_product){
+        selected_product.qty +=1; // If the product exists, increase the quantity
+      } 
+      else {
+        state.cart_items.push({ ...product, qty: 1 }); // if it doesn't then just push it in the cart and set the quantity to 1
       }
+      SetData(state.cart_items);
     },
-    //increasing the quantity
-    increaseQty: (state, action) => {
-      const selected_product = state.cart_items.find((item) => item.id === action.payload);
-      if (selected_product) {
-        selected_product.qty += 1;
-        SetData(state.cart_items);
-      }
-    },
+    
     //decreasing the quantity
     decreaseQty: (state, action) => {
       const selected_product = state.cart_items.find((item) => item.id === action.payload);
