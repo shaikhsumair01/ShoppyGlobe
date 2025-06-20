@@ -72,7 +72,7 @@ ShoppyGlobe is a responsive e-commerce web application built using React and Red
 4. Run the project
     
     ```PowerShell
-        npm run dev
+       To run locally: npm run dev 
     ```
 
 # Github link:
