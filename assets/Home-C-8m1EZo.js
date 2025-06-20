@@ -1,0 +1,1 @@
+import{j as o}from"./index-BqCSXN3r.js";import{P as r}from"./ProductList-CcolINgL.js";import"./ProductItems-CJhT1aB3.js";import"./useFetch-BTewDyvU.js";function i(){return o.jsxs(o.Fragment,{children:[o.jsx("h1",{className:"Home-Header",children:"Welcome to ShoppyGlobe - Your very own fashion store."}),o.jsx(r,{})]})}export{i as default};
