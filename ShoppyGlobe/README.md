@@ -85,3 +85,6 @@ https://github.com/shaikhsumair01/ShoppyGlobe
 - upgrading the mobile navigation for a more better user experience
 - improving the checkout page after the user has made the purchase
 
+# A minor bug with navigation
+- In mobile navigation, the user will have to manually close the navigation. The navigation will be open since the same navigation is being displayed on the desktop screen. When clicking on the links (tapping on them) the page gets redirected in mobile nav but the navigation doesn't close itself.
+ -  Will update it in the future
