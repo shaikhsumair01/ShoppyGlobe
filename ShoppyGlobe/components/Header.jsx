@@ -14,7 +14,7 @@ export default function Header(){
 };
 // Using useState to get user inputs when the user types anything inside the search bar
 const [searchText, setSearchText] = useState("")
-const [isOpen, setIsOpen] = useState(false);
+const [isOpen, setIsOpen] = useState(true);
 // Toggling isOpen and when the navigation is open (in mobile view), the user should not be able to scroll
 useEffect(() => {
   if (isOpen) {
@@ -27,6 +27,17 @@ useEffect(() => {
 
   }
 }, [isOpen]);
+
+useEffect(() => {
+  const handleResize = () => {
+    if (window.innerWidth > 768) {
+      setIsOpen(true); // Ensure nav is visible on desktop
+    }
+  };
+
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
 
 const navigate = useNavigate(); // Navigation hook used for navigating to the searched item (Search page)
 
@@ -71,7 +82,7 @@ const cartCount = useSelector((state) =>
         </div>
 
        <ul className={`Navigation ${isOpen? "flex" : "hidden"}`}>
-    <NavLink to="/" className={({ isActive }) => isActive ? "Nav-link active" : "Nav-link"} onClick={()=>setIsOpen(!isOpen)}>
+    <NavLink to="/" className={({ isActive }) => isActive ? "Nav-link active" : "Nav-link"}>
         Home
     </NavLink>
     {/* Mapping through the categoryMapping objects and based on their key navigating to different pages */}
@@ -81,7 +92,7 @@ const cartCount = useSelector((state) =>
             to={`/${key}`} 
             state={{ category: categoryMapping[key] }} 
             className={({ isActive }) => isActive ? "Nav-link active" : "Nav-link"}
-            onClick={()=>setIsOpen(!isOpen)}
+            
         >
             {key}
         </NavLink>
