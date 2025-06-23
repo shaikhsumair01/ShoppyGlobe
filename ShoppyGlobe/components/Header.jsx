@@ -35,6 +35,9 @@ useEffect(() => {
 
       setIsOpen(true); // Ensure nav is visible on desktop
     }
+    else{
+      setIsOpen(false);
+    }
   };
 
   window.addEventListener("resize", handleResize);
