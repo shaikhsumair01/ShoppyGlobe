@@ -1,0 +1,1 @@
+import{j as t}from"./index-BzOCbc_H.js";import{P as o}from"./ProductList-CJO2d6OL.js";import"./ProductItems-fcbVFHlo.js";import"./useFetch-BxLg4T21.js";function e(){return t.jsx(o,{category:"men's clothing"})}export{e as default};

@@ -1,0 +1,1 @@
+import{j as r}from"./index-BzOCbc_H.js";import{P as t}from"./ProductList-CJO2d6OL.js";import"./ProductItems-fcbVFHlo.js";import"./useFetch-BxLg4T21.js";function m(){return r.jsx(t,{category:"jewelery"})}export{m as default};
