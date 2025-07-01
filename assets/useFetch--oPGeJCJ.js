@@ -1,0 +1,1 @@
+import{r as t}from"./index-_PNHGX-Y.js";const S=(e,s)=>{const[o,n]=t.useState([]),[f,u]=t.useState(null),[i,a]=t.useState(!0),r=t.useCallback(async()=>{try{const l=await(await fetch(e,s)).json();n(l),a(!1)}catch(c){u(c),a(!1)}},[e,JSON.stringify(s)]);return t.useEffect(()=>{r()},[e,JSON.stringify(s)]),{data:o,load:i,error:f,reFetch:r}};export{S as u};
