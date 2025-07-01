@@ -3,6 +3,7 @@ import { useFetch } from "../Custom Hooks/useFetch";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addCart } from "../src/Redux/Redux-slices/CartSlice";
+import { toast, ToastContainer } from 'react-toastify';
 
 /* Fetching the selected product based on their id using useParams and 
  showing the selected product's details */ 
@@ -25,11 +26,21 @@ export default function ProductDetails(){
             <div className="btn-container">
                 <Link to={`/`}><button className="back-btn">Go Back</button></Link>
                <button className="Add-to-cart" onClick={() => {
-                          alert("Item added to the cart")
+                         toast.success("Item added to the cart");
                           // dispatching the action
                           dispatch(addCart({ ...data, id: data.id }))}}>Add to Cart</button>
             </div>
             </div>
+             <ToastContainer
+  position="bottom-center"
+  autoClose={2000}
+  hideProgressBar={false}
+  newestOnTop={false}
+  closeOnClick
+  pauseOnFocusLoss
+  draggable
+  pauseOnHover
+/>
            
         </div>
 
