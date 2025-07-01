@@ -12,14 +12,16 @@ export default function CartItem({ data }) {
       <h2 className="Cart-title">{data.title}</h2>
       <h3 className="Cart-qt">Quantity: 
         <span className="Qt-val">
-          <i className="fa-solid fa-plus cart-icon divider" onClick={()=>dispatch(addCart({...data, id: data.id}))}>
+          <i className="fa-solid fa-plus plus-icon" onClick={()=>dispatch(addCart({...data, id: data.id}))}>
             </i> {data.qty} 
-            <i className="fa-solid fa-minus cart-icon divider"  onClick={()=>dispatch(decreaseQty(data.id))}></i>
+            <i className="fa-solid fa-minus cart-icon"  onClick={()=>dispatch(decreaseQty(data.id))}></i>
             </span> 
             </h3>
       <h3 className="Cart-price">Price: ₹{product_price * data.qty}</h3>
       </div>
+      <div className="Cart-trash">
     <i className="fa-solid fa-trash cart-icon"  onClick={()=>dispatch(decreaseAllQty(data.id))}></i>
+    </div>
     </div>
   );
 }

@@ -90,7 +90,7 @@ const cartCount = useSelector((state) =>
             <div className="nav-icon-div">
             <i className="fa-solid fa-arrow-right-to-bracket login-icon"></i>
           <NavLink to="/cart" className={({ isActive }) => isActive ? "active" : ""}>
-  <i className="fa-solid fa-cart-shopping cart-icon"><sup className="cart-count-badge">{cartCount}</sup></i>
+  <i className="fa-solid fa-cart-shopping shopping-icon"><sup className="cart-count-badge">{cartCount}</sup></i>
 </NavLink>
             </div>
         </div>
