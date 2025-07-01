@@ -1,1 +1,0 @@
-import{j as s,L as t}from"./index-q3ewxLsK.js";function o(){return s.jsxs("div",{className:"Checkout",children:[s.jsx("h1",{className:"Checkout-text",children:"Thanks for Shopping with ShoppyGlobe "}),s.jsx(t,{to:"/",children:s.jsx("button",{className:"back-btn",children:"Go Back"})})]})}export{o as default};
