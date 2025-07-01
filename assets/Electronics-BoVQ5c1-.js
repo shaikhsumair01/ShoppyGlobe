@@ -1,0 +1,1 @@
+import{j as t}from"./index-BV21WcG7.js";import{P as r}from"./ProductList-MFESIdT7.js";import"./ProductItems-CICw5CiB.js";import"./useFetch-Bi4fPaFg.js";function c(){return t.jsx(r,{category:"electronics"})}export{c as default};
