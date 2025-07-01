@@ -14,7 +14,8 @@ export default function Header(){
 };
 // Using useState to get user inputs when the user types anything inside the search bar
 const [searchText, setSearchText] = useState("")
-const [isOpen, setIsOpen] = useState(true);
+const [isOpen, setIsOpen] = useState(() => window.innerWidth >= 768);
+
 // Toggling isOpen and when the navigation is open (in mobile view), the user should not be able to scroll
 useEffect(() => {
   if (window.innerWidth <768 && isOpen) {
