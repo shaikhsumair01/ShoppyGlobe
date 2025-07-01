@@ -1,1 +1,0 @@
-import{j as o}from"./index-BV21WcG7.js";import{P as t}from"./ProductList-MFESIdT7.js";import"./ProductItems-CICw5CiB.js";import"./useFetch-Bi4fPaFg.js";function e(){return o.jsx(t,{category:"women's clothing"})}export{e as default};
