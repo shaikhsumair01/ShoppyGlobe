@@ -202,22 +202,25 @@ md:bg-transparent md:flex-row md:justify-start md:items-start md:relative md:ml-
 /* Cart-Item.jsx */
 /* ***** */
 .Cart-item{
-    @apply flex w-[80%] md:w-[50%] justify-between p-12 md:p-10 my-2 md:my-0 bg-gray-100 rounded-lg;
+     @apply flex w-full lg:w-[50%] justify-center items-center lg:justify-between p-4 md:p-10 my-2 bg-gray-100 rounded-lg;
+
 }
 .Cart-item-image{
-    @apply h-20 w-20 md:h-30 md:w-30;
+  @apply h-15 w-15 lg:h-30 lg:w-30 max-w-[25%] object-contain;
+
 }
 .Cart-desc{
     @apply flex flex-col gap-2 items-center ;
 }
 .Cart-title{
-    @apply w-[60%] md:w-[70%] text-teal-600 text-base md:text-lg font-semibold;
+    @apply w-full text-teal-600 text-base lg:text-lg font-semibold break-words text-center lg:text-left;
+
 }
 .Cart-qt{
-    @apply flex gap-3 items-center text-lg font-bold;
+    @apply flex gap-3 items-center text-base lg:text-lg font-bold;
 }
 .Qt-val{
-    @apply flex items-center gap-5 p-2 bg-white rounded-md;
+    @apply flex items-center gap-4 p-2 bg-white rounded-md;
 }
 .Cart-price{
     @apply text-teal-600 font-semibold;
