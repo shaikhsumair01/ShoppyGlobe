@@ -108,7 +108,7 @@ md:bg-transparent md:flex-row md:justify-start md:items-start md:relative md:ml-
     @apply scale-65 h-[50%] w-auto;
 }
 .Product-name{
-    @apply text-base font-semibold text-center text-teal-700;
+    @apply text-base font-semibold text-center break-words text-teal-700 lg:text-left;
 }
 .Product-price{
     @apply text-xl font-semibold mb-2;
@@ -233,7 +233,7 @@ md:bg-transparent md:flex-row md:justify-start md:items-start md:relative md:ml-
     @apply flex flex-col gap-5 items-center justify-center w-screen h-screen ;
 }
 .Checkout-text{
-    @apply text-red-500 text-2xl;
+    @apply text-red-500 text-2xl text-center;
 }
 
 /* Spinner.jsx for lazyload */
