@@ -1,4 +1,4 @@
-import {NavLink, useNavigate } from "react-router-dom"
+import {NavLink, useNavigate, useLocation } from "react-router-dom"
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 
@@ -15,6 +15,8 @@ export default function Header(){
 // Using useState to get user inputs when the user types anything inside the search bar
 const [searchText, setSearchText] = useState("")
 const [isOpen, setIsOpen] = useState(() => window.innerWidth >= 768);
+const location = useLocation();
+
 
 // Toggling isOpen and when the navigation is open (in mobile view), the user should not be able to scroll
 useEffect(() => {
@@ -44,6 +46,12 @@ useEffect(() => {
   window.addEventListener("resize", handleResize);
   return () => window.removeEventListener("resize", handleResize);
 }, []);
+
+useEffect(() => {
+  if (window.innerWidth < 768) {
+    setIsOpen(false);
+  }
+}, [location.pathname]);
 
 const navigate = useNavigate(); // Navigation hook used for navigating to the searched item (Search page)
 
