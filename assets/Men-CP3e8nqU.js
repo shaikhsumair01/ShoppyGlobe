@@ -1,0 +1,1 @@
+import{j as t}from"./index-7VN2XEsk.js";import{P as e}from"./ProductList-CAKDgqdP.js";import"./ProductItems-BwCZrGjq.js";import"./useFetch-Bush90FI.js";function i(){return t.jsxs(t.Fragment,{children:[t.jsx("h2",{className:"Section-header",children:"Men's collection"}),t.jsx(e,{category:"men's clothing"})]})}export{i as default};

@@ -1,0 +1,1 @@
+import{j as o}from"./index-7VN2XEsk.js";import{P as t}from"./ProductList-CAKDgqdP.js";import"./ProductItems-BwCZrGjq.js";import"./useFetch-Bush90FI.js";function i(){return o.jsxs(o.Fragment,{children:[o.jsx("h2",{className:"Section-header",children:"Women's Collection"}),o.jsx(t,{category:"women's clothing"})]})}export{i as default};
