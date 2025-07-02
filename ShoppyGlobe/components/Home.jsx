@@ -1,13 +1,15 @@
-
-import ProductList from "./ProductList";
+import HeroSection from "./HeroSection";
+import BestSellers from "./BestSellers";
+import NewArrivals from "./NewArrivals";
 // Used for rendering the homepage. Contains the title and then the productList component
 export default function Home() {
 
   return (
     <>
-      <h1 className="Home-Header">Welcome to ShoppyGlobe - Your very own fashion store.</h1>
+      <HeroSection/>
+      <BestSellers />
+      <NewArrivals/>
      
-      <ProductList />
     </>
   );
 }

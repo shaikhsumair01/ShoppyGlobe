@@ -82,50 +82,70 @@ md:bg-transparent md:flex-row md:justify-start md:items-start md:relative md:ml-
 }
 
 /* ***** */
-/* Home.jsx */
+/* Hero.jsx */
 /* ***** */
-.Home-Header{
-    @apply text-center text-xl text-teal-700 my-10;
+.Hero-section{
+    @apply bg-gradient-to-br from-teal-600 via-teal-700 to-emerald-900 text-white py-20 px-6 text-center;
 }
-.Dropdown-div{
-    @apply flex gap-1 mx-10;
+.Hero-container{
+    @apply max-w-3xl mx-auto;
 }
-.Filter-Header{
-    @apply font-semibold w-40;
+.Hero-Header{
+    @apply text-4xl md:text-5xl font-bold mb-4;
 }
-.Dropdown{
-    @apply bg-gray-100 w-30 text-center rounded-md; 
+.Hero-text{
+    @apply text-lg md:text-xl mb-6;
 }
 
+/* ***** */
+/* BestSellers.jsx */
+/* ***** */
+.BestSellers-section{
+    @apply bg-gray-100;
+}
+.BestSellers-section, .NewArrivals-section{
+    @apply px-6 py-15 ;
+}
+.Section-header{
+    @apply text-3xl text-center font-bold m-6 text-teal-600;
+}
+.BestSeller-List, .Product-List, .NewArrivals-List{
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-3 place-items-center mt-10
+}
+.BestSeller-List, .NewArrivals-List{
+    @apply md:grid-cols-3;
+}
 /* ***** */
 /* ProductList.jsx */
 /* ***** */
 .Product-List{
-    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 place-items-center mt-10 ;
+    @apply md:grid-cols-4 py-15 ;
 }
 .Product-card{
-    @apply h-[90%] w-full flex flex-col items-center gap-2 rounded-md bg-linear-145 from-gray-200 via-gray-50 to-gray-300 p-2 hover:scale-105;
+@apply w-full flex flex-col items-center justify-center gap-3 rounded-md bg-gradient-to-br from-gray-200 to-gray-100 p-5 hover:scale-105;
+  height: 420px;
 }
 .Product-image{
-    @apply scale-65 h-[50%] w-auto;
+   @apply h-[40%] object-contain;
+
 }
 .Product-name{
-    @apply text-base font-semibold text-center break-words text-teal-700 lg:text-left;
+    @apply text-base font-semibold text-center break-words  text-ellipsis overflow-hidden text-teal-700 lg:text-left  line-clamp-2 h-[3rem];
 }
 .Product-price{
-    @apply text-xl font-semibold mb-2;
+    @apply text-lg font-bold text-gray-700;
 }
 .Show-description, .Add-to-cart, .back-btn{
     @apply text-white p-2 rounded-md;
 }
 .btn-container{
-    @apply flex gap-3;
+    @apply flex gap-3 mb-1;
 }
 .Show-description, .back-btn{
-    @apply bg-black border-2 border-teal-600 hover:bg-teal-600;
+    @apply bg-black hover:bg-gradient-to-tr hover:from-gray-900 hover:to-gray-600;
 }
-.Add-to-cart{
-    @apply  bg-teal-700 border-2 border-teal-900 hover:bg-teal-900;
+.Add-to-cart, .clear{
+    @apply  bg-gradient-to-br from-teal-600 via-teal-700 to-emerald-900 hover:from-teal-900 hover:to-emerald-600;
 }
 .loadingError,.Loading-para{
 @apply font-semibold text-center mt-20;
@@ -188,9 +208,7 @@ md:bg-transparent md:flex-row md:justify-start md:items-start md:relative md:ml-
 .clear, .checkout-btn{
     @apply mt-5 p-2  text-white text-lg;
 }
-.clear{
-    @apply bg-teal-600;
-}
+
 .checkout-btn{
     @apply bg-red-700;
 }
@@ -204,7 +222,7 @@ md:bg-transparent md:flex-row md:justify-start md:items-start md:relative md:ml-
 /* Cart-Item.jsx */
 /* ***** */
 .Cart-item {
-  @apply flex w-full lg:w-[50%] items-center gap-4 md:gap-8 p-4 md:p-6 my-2 bg-gray-100 rounded-lg;
+  @apply flex w-full lg:w-[50%] items-center gap-4 md:gap-8 p-4 md:p-6 my-2 bg-gradient-to-br from-teal-600 via-teal-700 to-emerald-900 rounded-lg;
 }
 
 .Cart-item-image {
@@ -218,11 +236,11 @@ md:bg-transparent md:flex-row md:justify-start md:items-start md:relative md:ml-
 }
 
 .Cart-title {
-  @apply text-teal-600 text-base lg:text-lg font-semibold break-words text-left;
+  @apply text-white text-base lg:text-lg font-semibold break-words text-left;
 }
 
 .Cart-qt {
-  @apply flex gap-3 items-center text-base lg:text-lg font-bold;
+  @apply flex gap-3 items-center text-base lg:text-lg font-bold cursor-pointer;
 }
 
 .Qt-val {
@@ -230,11 +248,11 @@ md:bg-transparent md:flex-row md:justify-start md:items-start md:relative md:ml-
 }
 
 .Cart-price {
-  @apply text-teal-600 font-semibold;
+  @apply text-white font-semibold;
 }
 
 .plus-icon, .cart-icon, .login-icon, .shopping-icon{
-    @apply cursor-pointer text-gray-700; 
+    @apply cursor-pointer text-gray-900; 
 }
 .plus-icon, .login-icon, .shopping-icon{
     @apply hover:text-teal-600;
@@ -261,4 +279,39 @@ md:bg-transparent md:flex-row md:justify-start md:items-start md:relative md:ml-
 }
 .Spinner-item{
     @apply w-25 h-25 rounded-full border-[15px] border-t-[10px] border-t-amber-200 border-amber-600 animate-spin;
+}
+
+/* ***** */
+/* Footer.jsx  */
+/* ***** */
+.Footer-Section{
+    @apply bg-teal-700 text-white py-10 px-6;
+}
+.Footer-details{
+    @apply max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8;
+}
+.Footer-title{
+    @apply text-lg font-semibold mb-4;
+}
+.Project-text{
+    @apply text-sm;
+}
+
+.OuickLinks-list{
+    @apply space-y-2 text-sm flex flex-col;
+}
+.Contact-list{
+    @apply text-sm space-y-1;
+}
+.Update-text{
+    @apply text-sm mb-2;
+}
+.email-box{
+    @apply p-2 mr-1 text-teal-600 text-base bg-white focus:outline-none;
+}
+.footer-btn{
+    @apply bg-white text-teal-700 font-semibold p-2  hover:bg-gray-100;
+}
+.Bottom-txt{
+    @apply mt-8 border-t border-teal-600 pt-4 text-center text-sm text-teal-100;
 }
