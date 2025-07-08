@@ -1,13 +1,22 @@
 import express from "express";
-import mongoose from "mongoose";
-import dotenv from "dotenv";
-dotenv.config();
+import mongoose from "./db.js";
+import productRoutes from "./product.routes.js";
 
+// creating a server
 const app = express();
-const port = process.env.PORT || 3000;
+// Setting the port
+const port =  3000;
 
-mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log("Database connected successfully"))
-  .catch(err => console.log(`Can't connect to the database. ${err}`));
+// Middleware for parsing JSON 
+app.use(express.json());
 
-app.listen(port, () => console.log(`The App is running on port ${port}`));
+
+// connecting to the product.route 
+productRoutes(app)
+// connecting to the database
+mongoose.connect("mongodb://localhost:27017/shoppyglobe")
+  .then(() => {
+    console.log(" Database is connected");
+    app.listen(port, () => console.log(`Server is running on port ${port}`));
+  })
+  .catch(err => console.error("Database connection error:", err));

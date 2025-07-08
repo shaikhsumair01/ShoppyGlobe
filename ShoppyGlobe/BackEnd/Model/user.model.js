@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 // creating the userSchema for user authentication
+// the userSchema contains name, email and password
 const userSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -15,5 +16,6 @@ const userSchema = new mongoose.Schema({
     }
 })
 
+// creating a model and exporting it
 const Users = mongoose.model('users', userSchema);
 export default Users;
