@@ -1,8 +1,12 @@
 {
   "name": "shoppyglobe",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
+  "description": "ShoppyGlobe is a responsive e-commerce web application built using React and Redux. It allows users to browse a list of products, view detailed information, add/remove items to/from the cart, and proceed through a basic checkout process.",
+  "license": "ISC",
+  "author": "",
   "type": "module",
+  "main": "eslint.config.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -14,7 +18,9 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
     "@tailwindcss/vite": "^4.1.9",
+    "express": "^5.1.0",
     "flowbite-react": "^0.11.8",
+    "mongoose": "^8.16.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-redux": "^9.2.0",
