@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from "../Router/db.js";
 // creating the cart schema for crud operations in cart
 const cartSchema = new mongoose.Schema({
     id: Number,
@@ -9,7 +9,14 @@ const cartSchema = new mongoose.Schema({
     rating:{
         rate: Number,
         count: Number
-    }
+    },
+    qty: {
+  type: Number,
+  required:true,
+  default: 1,
+
+}
+
 })
 
 export default mongoose.model("cart", cartSchema)

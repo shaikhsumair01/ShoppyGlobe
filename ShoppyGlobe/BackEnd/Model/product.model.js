@@ -37,6 +37,6 @@ const productSchema = new mongoose.Schema({
 });
 
 // creating a model and exporting it to product controller
-const Product = mongoose.model('Product', productSchema, 'products');
+const Product = mongoose.model('Product', productSchema);
 
 export default Product
