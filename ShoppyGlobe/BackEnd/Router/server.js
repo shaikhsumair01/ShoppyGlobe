@@ -2,6 +2,10 @@ import express from "express";
 import mongoose from "./db.js";
 import productRoutes from "./product.routes.js";
 import cartRoutes from "./cart.routes.js";
+import userRoutes from "./user.routes.js";
+import dotenv from 'dotenv';
+dotenv.config();
+
 // creating a server
 const app = express();
 // Setting the port
@@ -14,6 +18,7 @@ app.use(express.json());
 // connecting to the product.route 
 productRoutes(app)
 cartRoutes(app)
+userRoutes(app)
 // connecting to the database
 mongoose.connect("mongodb://localhost:27017/shoppyglobe")
   .then(() => {

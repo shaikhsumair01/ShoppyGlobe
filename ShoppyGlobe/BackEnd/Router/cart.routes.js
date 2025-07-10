@@ -1,4 +1,4 @@
-import { getCart, addCart, updateCart, deleteCart } from "../Controller/cart.controller.js"
+import { getCart, addCart, updateCart, deleteCart } from "./Controller/cart.controller.js"
 // getting all the routes form cart controllers
 export default function cartRoutes(app){
 app.get("/cart", getCart)

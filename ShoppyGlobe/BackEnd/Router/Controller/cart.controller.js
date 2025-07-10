@@ -39,7 +39,7 @@ catch(err){
 /* finding and updating the item quantity based on the id 
  and the sign provided by the user in the req.body. 
 If the sign is "+" then the quantity increases and if it is "-" then it will decrease */
-// the cart items will be updated on route "/cart/:id"
+// the cart items will be updated on route "/cart"
 
 export const updateCart = async (req, res) => {
   try {
@@ -78,7 +78,7 @@ export const updateCart = async (req, res) => {
 
   }
 };
-// deleting the cart items by taking their id. Items deleted on route "/cart/:id"
+// deleting the cart items by taking their id. Items deleted on route "/cart"
 export const deleteCart = async(req,res)=>{
 try{ 
     // getting id and sign from the user

@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from "../db.js";
 // creating the userSchema for user authentication
 // the userSchema contains name, email and password
 const userSchema = new mongoose.Schema({

@@ -1,5 +1,5 @@
 //creating the product schema for showing products on the website
-import mongoose from "../Router/db.js";
+import mongoose from "../db.js";
 // the product schema containing title, price, description, category and rating
 const productSchema = new mongoose.Schema({
   title: {

@@ -1,4 +1,4 @@
-import mongoose from "../Router/db.js";
+import mongoose from "../db.js";
 // creating the cart schema for crud operations in cart
 const cartSchema = new mongoose.Schema({
     id: Number,
