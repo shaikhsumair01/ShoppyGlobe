@@ -17,6 +17,7 @@ ShoppyGlobe is a responsive e-commerce web application built using React and Red
 
 -Update - #(testing purpose since the backend is not integrated in the front-end)
     -JWT token based authentication for user registeration and validation
+    -Protecting the cart using JWT authentication
     -Crud operations using MongoDB (mongoose) using rest api for fetching and storing products.
     -Crud operations for updating product quantity in the cart system
     
