@@ -55,7 +55,7 @@ export default function Footer(){
         <div>
           <h4 className="Footer-title">Stay Connected</h4>
           <p className="Update-text">Get the latest updates and offers.</p>
-          <form className="flex">
+          <form className="flex items-center gap-2 flex-col ">
             <input
               type="email"
               placeholder="Your email"
