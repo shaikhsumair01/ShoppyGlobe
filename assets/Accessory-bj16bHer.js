@@ -1,1 +1,0 @@
-import{j as r}from"./index-DDL7GcGp.js";import{P as e}from"./ProductList-CVmnE08E.js";import"./ProductItems-CqlMS6Lo.js";import"./useFetch-C1xZplH9.js";function i(){return r.jsxs(r.Fragment,{children:[r.jsx("h2",{className:"Section-header",children:"Accessory Collection"}),r.jsx(e,{category:"jewelery"})]})}export{i as default};
