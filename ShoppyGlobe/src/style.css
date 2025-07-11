@@ -136,10 +136,10 @@ md:bg-transparent md:flex-row md:justify-start md:items-start md:relative md:ml-
     @apply text-lg font-bold text-gray-700;
 }
 .Show-description, .Add-to-cart, .back-btn{
-    @apply text-white p-2 rounded-md;
+    @apply text-white p-2 rounded-md w-15 sm:w-auto text-sm;
 }
 .btn-container{
-    @apply flex gap-3 mb-1;
+    @apply flex gap-2 justify-center items-center md:gap-3 mb-1;
 }
 .Show-description, .back-btn{
     @apply bg-black hover:bg-gradient-to-tr hover:from-gray-900 hover:to-gray-600;
