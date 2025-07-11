@@ -1,0 +1,1 @@
+import{j as r}from"./index-CXdjHKvr.js";import{P as t}from"./ProductList-CQUUKCYz.js";import"./ProductItems-DZEPpzVm.js";import"./useFetch-DhVdCqPV.js";function i(){return r.jsxs(r.Fragment,{children:[r.jsx("h2",{className:"Section-header",children:"Electronics Collection"}),r.jsx(t,{category:"electronics"})]})}export{i as default};
